@@ -1,0 +1,70 @@
+/*cores usadas: 
+    #311F0A;
+*/
+:root{
+  --cor: #DEC9B1;
+}
+
+header{ 
+  color: white;
+} 
+
+body{
+    background-color: white;
+    font-family: 'Ubuntu';
+}
+
+#line{
+  width: auto;
+  border: 1px solid #9E8981;
+  margin-bottom: 15px;
+}
+
+#box{
+  width: auto;
+  height: 100px;
+
+  background-color: #DEC9B1;
+
+}
+
+#nav{
+  background-color: #311F0A;
+}
+
+.nav-custom{
+  background-color: #311F0A;
+  text-size: 4em;
+}
+
+#nav{
+  color: white;
+}
+
+#destaque{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bolder;
+  color: #F3BD3A;
+  font-size: 4em;
+  /*text-shadow: 2px 2px #00000030;*/
+}
+
+main{
+  padding: 25px 0px;
+}
+
+body{
+  background-color: #DEC9B170;
+  background-image: url(/imgs/gplay.svg);
+}
+
+#resp{
+  background-color: #000;
+}
+
+@media (max-width: 400px){
+  .resp{
+    width: 80%;
+    background-color: 
+  }
+}
