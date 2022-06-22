@@ -17,12 +17,12 @@
     if($papel[0] == 1){ //parte do cliente
   ?>
     <div class="container">
-      bem vindo <?php echo "".$_SESSION["nome"] ?> cliente
+      
     </div>
   <?php  }else if($papel[0] == 2){ //parte do barbeiro
   ?>
     <div class="container">
-    barbeiro
+    
     </div>
   <?php
     }
