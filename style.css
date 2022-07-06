@@ -48,6 +48,12 @@ body{
   text-shadow: 2px 2px #b8b8b830;
 }
 
+#destaque-1{
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bolder;
+  font-size: 1.5em;
+}
+
 main{
   padding: 25px 0px;
 }
@@ -62,7 +68,8 @@ body{
 }
 
 #box_destaque{
-  background-color: #F3BD3A;
+  background-color: #d6e7ff10;
+  max-width: 600px;
   border-radius: 10px;
 }
 
