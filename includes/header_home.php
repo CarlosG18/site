@@ -35,34 +35,6 @@
         <a class="nav-link" href="#">ajuda</a>
       </li>
     </ul>
-    <ul class="navbar-nav mx-auto">
-      <li class="nav-link">
-        <?php
-            $sql1 = "SELECT papel_id FROM usuario_papel WHERE usuario_id=".$_SESSION["id"]."";
-            $consulta = pg_query($conexao,$sql1);
-            $row = pg_fetch_row($consulta,$i);
-            for($x = 0; $x < count($row); $x++) {
-              //echo $row[$x];
-              //if($row[$x] == 1){
-                //echo "cliente";
-              //}else if($row[$x] == 2){
-                //echo "barbeiro";
-              //}
-            }
-             ?>
-      </li>
-      <li>
-        <a class="nav-link" href="add_cat.php?type=<?php                   if($string_papel == "cliente"){
-              echo "2";
-            }else if($string_papel == "barbeiro"){
-              echo "1";
-            }
-?>"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
-  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-</svg> categoria</a>
-      </li>      
-    </ul>
     <ul class="navbar dropdown ml-auto mb-0">
        <button type="button" class="btn btn-light shadow dropdown-toggle" data-toggle="dropdown">
     <?php echo $_SESSION["nome"]; ?>
