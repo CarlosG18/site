@@ -5,7 +5,7 @@
     $papel = $_POST["papel"];
     $senha = sha1($_POST["senha"]);
        
-    $sql = "INSERT INTO usuario (nome, email,senha) VALUES ('".$nome."','".$email."','".$senha."')";
+    $sql = "INSERT INTO usuario (nome,senha,email) VALUES ('".$nome."','".$senha."','".$email."')";
        
     pg_query($conexao, $sql);  
 

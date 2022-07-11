@@ -28,7 +28,7 @@ include ('includes/conexao.php');
   </div>
   <div class="form-group">
     <label for="email">
-    Email: <?php echo "".$row[2]; ?></label>
+    Email: <?php echo "".$row[3]; ?></label>
     <input type="email" class="form-control" placeholder="Novo email" name="email">
   </div>
   <div class="form-group">

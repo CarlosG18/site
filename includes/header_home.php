@@ -1,12 +1,13 @@
 <?php
+  session_start();
   $sql = "SELECT papel_id FROM usuario_papel WHERE usuario_id=".$_SESSION["id"];
   $result = pg_query($conexao, $sql);
-  $papel = pg_fetch_row($result,$i);
+  $_SESSION["papel"] = pg_fetch_row($result,$i);
   $string_papel;
 
-  if($papel[0] == 1){
+  if($_SESSION["papel"][0] == 1){
     $string_papel = "cliente";
-  }else if($papel[0] == 2){
+  }else if($_SESSION["papel"][0] == 2){
     $string_papel = "barbeiro";
   }
 ?>
@@ -34,6 +35,18 @@
       <li class="nav-item">
         <a class="nav-link" href="#">ajuda</a>
       </li>
+    </ul>
+      <ul class="navbar dropdown ml-auto mb-0">
+       <button type="button" class="btn btn-light shadow dropdown-toggle" data-toggle="dropdown">
+    <?php echo $string_papel; ?>
+  </button>
+  <div class="dropdown-menu">
+    <?php if($_SESSION["papel"][0] == 1){ ?>
+    <a class="dropdown-item" href="home.php?categoria=2">trocar para barbeiro</a>
+    <?php }else if($_SESSION["papel"][0] == 2){?>
+    <a class="dropdown-item" href="home.php?categoria=1">trocar para cliente</a>
+  <?php } ?>
+  </div>
     </ul>
     <ul class="navbar dropdown ml-auto mb-0">
        <button type="button" class="btn btn-light shadow dropdown-toggle" data-toggle="dropdown">
