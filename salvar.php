@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include 'includes/conexao.php'; 
     $nome = $_POST["nome"];
     $email = $_POST["email"];
@@ -11,6 +12,7 @@
 
     $select_id = "SELECT id FROM usuario WHERE nome='".$nome."' and email='".$email."' and senha='".$senha."'";
 
+    $_SESSION["id_logado"] = $select_id;
     $result = pg_query($conexao, $select_id);
     $id = pg_fetch_row($result,$i);
 

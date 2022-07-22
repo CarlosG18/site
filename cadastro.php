@@ -24,10 +24,14 @@
 				</div>
           <div class="form-group">
             <label for="tipo">tipo:</label><br>
-					  <input type="radio" id="cliente" name="papel" value="1">
-            <label for="cliente">cliente</label><br>
-            <input type="radio" id="barbeiro" name="papel" value="2">
+            <input type="radio" id="barbeiro" name="papel" value="1">
             <label for="cliente">barbeiro</label><br>
+            <input type="radio" id="adm" name="papel" value="2">
+            <label for="cliente">administrador</label><br>
+            <input type="radio" id="vendedor" name="papel" value="3">
+            <label for="cliente">vendedor</label><br>
+					  <input type="radio" id="cliente" name="papel" value="4">
+            <label for="cliente">cliente</label><br>
 				</div>
 				<div class="form-group">
 					<label for="pwd">Senha:</label>

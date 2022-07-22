@@ -1,9 +1,9 @@
 <main>
-      <div id="box_destaque" class="container d-flex shadow mx-auto my-3 p-3">
-         <div>
+      <div id="box_destaque" class="container row shadow mx-auto my-3 p-3">
+         <div class="col-sm-2">
            <img style="max-width: 200px; width:150px; padding-top: auto" src="/imgs/tesoura.svg" alt="pesquisar">
          </div>
-         <div class=" d-flex flex-column text-center">
+         <div class="col-sm-10 text-center my-auto">
            <p 
 id="destaque" style="font-size: 2.5em;">Cadastre sua Barbearia já!</p>
            <div>

@@ -6,9 +6,13 @@
   $string_papel;
 
   if($_SESSION["papel"][0] == 1){
-    $string_papel = "cliente";
-  }else if($_SESSION["papel"][0] == 2){
     $string_papel = "barbeiro";
+  }else if($_SESSION["papel"][0] == 2){
+    $string_papel = "adm";
+  }else if($_SESSION["papel"][0] == 3){
+    $string_papel = "vendedor";
+  }else if($_SESSION["papel"][0] == 4){
+    $string_papel = "cliente";
   }
 ?>
 
@@ -42,9 +46,21 @@
   </button>
   <div class="dropdown-menu">
     <?php if($_SESSION["papel"][0] == 1){ ?>
-    <a class="dropdown-item" href="home.php?categoria=2">trocar para barbeiro</a>
+    <a class="dropdown-item" href="home.php?categoria=2">trocar para adm</a>
+    <a class="dropdown-item" href="home.php?categoria=3">trocar para vendedor</a>
+    <a class="dropdown-item" href="home.php?categoria=4">trocar para cliente</a>
     <?php }else if($_SESSION["papel"][0] == 2){?>
-    <a class="dropdown-item" href="home.php?categoria=1">trocar para cliente</a>
+    <a class="dropdown-item" href="home.php?categoria=1">trocar para barbeiro</a>
+    <a class="dropdown-item" href="home.php?categoria=3">trocar para vendedor</a>
+    <a class="dropdown-item" href="home.php?categoria=4">trocar para cliente</a>
+    <?php }else if($_SESSION["papel"][0] == 3){?>
+    <a class="dropdown-item" href="home.php?categoria=1">trocar para barbeiro</a>
+    <a class="dropdown-item" href="home.php?categoria=2">trocar para adm</a>
+    <a class="dropdown-item" href="home.php?categoria=4">trocar para cliente</a>
+    <?php }else if($_SESSION["papel"][0] == 4){?>
+    <a class="dropdown-item" href="home.php?categoria=1">trocar para barbeiro</a>
+    <a class="dropdown-item" href="home.php?categoria=2">trocar para adm</a>
+    <a class="dropdown-item" href="home.php?categoria=3">trocar para vendedor</a>
   <?php } ?>
   </div>
     </ul>
